@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+body {
+  height: 100%;
+  text-align: center;
+}
+
+.tegel-img {
+  width: 101%;
+  border-radius: 2px;
+}
+
+.progress {
+  background-color: #d8d8d8;
+  border-radius: 20px;
+  position: relative;
+  transform: translateY(37px);
+  height: 10px;
+  width: 100%;
+}
+.progress-done {
+  background: linear-gradient(to left, #f2709c, #ff9472);
+  box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+  border-radius: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 0;
+  opacity: 0;
+  transition: 1s ease 0.3s;
+}
+
+.side-drawer {
+  height: 100%;
+  background-color: white;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  max-width: 500px;
+  z-index: 200;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
+}
+
+.side-drawer.open {
+  transform: translateX(0);
+}
+
+.side-drawer p {
+  padding: 10px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.side-drawer h4 {
+  margin: 10px;
+  padding-top: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+}
+
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0, 3);
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
